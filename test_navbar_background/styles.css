@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainpara {
+  font-size: 24px;
+  padding: 15px 15px 2500px;
+  margin-top: 30px;
+}
+
+.header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 1rem 1.5rem;
+  top: 0;
+  transition: top 0.3s;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  background-color: #101010;
+  display: block;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  width: 25px;
+}
+
+.nav-menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: yellow;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  /* to stop scrolling with nav menu open */
+  body.active {
+    overflow: hidden;
+  }
+
+  .nav-menu {
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    flex-direction: column;
+    justify-content: center;
+    left: -100%;
+    position: fixed;
+    top: 6em;
+    transition: 0.3s;
+    width: 80%;
+  }
+
+  .nav-menu.active {
+    left: 10%;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* responsive background */
+/* for desktop */
+body {
+  background-image: url(images/white_wooden_floor_desktop_2560x1707.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/* for mobile devices */
+@media (max-width: 480px) {
+  body {
+    background-image: url(images/white_wooden_floor_mobile_816x544.jpg);
+  }
+}
+/* for tablet devices */
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-image: url(images/white_wooden_floor_laptop_1366x911.jpg);
+  }
+}
+/* for laptop devices */
+@media (min-width: 1025px) {
+  body {
+    background-image: url(images/white_wooden_floor_laptop_1920x1080.jpg);
+  }
+}
+/* end of responsive background */
