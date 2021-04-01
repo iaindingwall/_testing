@@ -32,6 +32,7 @@ const timing = {
 
 const fade = image => {
   toggle(image).removeAttribute('loading');
+  document.getElementById('navbar').style.zIndex = '-1';
   image.animate(
     {
       transform: ['scale(.9)', 'none'],
