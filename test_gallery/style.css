@@ -1,7 +1,7 @@
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
 body,
 ul {
@@ -31,6 +31,7 @@ ul img {
   gap: var(--gutter);
   padding: var(--gutter);
   box-sizing: border-box;
+  margin: 80px 0 0 0;
 }
 
 @media (max-width: 450px) {
